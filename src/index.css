@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 0 0% 100%;
+    --color-foreground: 0 0% 0%;
+    --color-primary: 28 100% 50%;
+    --color-primary-foreground: 0 0% 100%;
+    --color-secondary: 0 0% 11%;
+    --color-secondary-foreground: 0 0% 100%;
+    --color-accent: 45 100% 62%;
+    --color-accent-foreground: 0 0% 11%;
+    --color-border: 0 0% 80%;
+    --color-emerald-dark: 160 80% 20%;
+    --color-emerald-accent: 160 80% 35%;
+    --color-emerald-hover: 160 80% 65%;
+    --color-emerald-light: 160 80% 45%;
+    --color-navbar-background: 160 80% 13%;
+    --color-navbar-text: 0 0% 100%;
+    --color-navbar-hover: 160 80% 65%;
+    --color-navbar-mobile: 160 80% 10%;
+    --color-neutral-surface: 160 80% 14%;
+    --color-neutral-text-primary: 0 0% 100%;
+    --color-neutral-text-secondary: 0 0% 80%;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    @apply bg-[#1B1B1B] text-white;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply text-base;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
