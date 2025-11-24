@@ -62,20 +62,23 @@ const Navbar: React.FC = () => {
 
           {/* Desktop - Hover trigger area */}
           <div className="hidden md:block">
-            <button
-              className="px-6 py-2.5 bg-[#FF7A00] text-white rounded-full font-medium hover:bg-[#FF8C1A] transition-colors duration-300 shadow-lg shadow-[#FF7A00]/50"
-            >
-              Menu
-            </button>
+            <Link to="/contact">
+              <button
+                className="px-6 py-2.5 bg-[#FF7A00] text-white rounded-full font-medium hover:bg-[#FF8C1A] transition-colors duration-300 shadow-lg shadow-[#FF7A00]/50"
+              >
+                Get in Touch
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden px-6 py-2.5 bg-[#FF7A00] text-white rounded-full font-medium hover:bg-[#FF8C1A] transition-colors duration-300 shadow-lg shadow-[#FF7A00]/50"
-          >
-            Menu
-          </button>
+          <Link to="/contact" className="md:hidden">
+            <button
+              className="px-6 py-2.5 bg-[#FF7A00] text-white rounded-full font-medium hover:bg-[#FF8C1A] transition-colors duration-300 shadow-lg shadow-[#FF7A00]/50"
+            >
+              Get in Touch
+            </button>
+          </Link>
         </nav>
 
         {/* Dropdown Menu on Hover - Desktop */}
