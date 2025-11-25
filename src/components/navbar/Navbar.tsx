@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from './Logo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +50,9 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-3"
             >
               <img 
-                src="https://c.animaapp.com/mi7g3usl9emzZf/img/image.png" 
+                src={Logo} 
                 alt="Growth SuperCharged" 
-                className="h-14 w-auto object-contain mix-blend-screen"
+                className="h-14 w-auto object-contain"
               />
             </motion.div>
           </Link>
@@ -145,9 +146,9 @@ const Navbar: React.FC = () => {
               <div className="h-20 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <img 
-                    src="https://c.animaapp.com/mi7g3usl9emzZf/img/image.png" 
+                    src={Logo} 
                     alt="Growth SuperCharged" 
-                    className="h-10 w-auto object-contain mix-blend-screen"
+                    className="h-10 w-auto object-contain"
                   />
                 </div>
                 <button

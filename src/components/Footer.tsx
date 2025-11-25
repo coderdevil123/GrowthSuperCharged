@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Logo from './navbar/Logo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -14,9 +15,9 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="https://c.animaapp.com/mi7g3usl9emzZf/img/image.png" 
+                src={Logo} 
                 alt="Growth SuperCharged" 
-                className="h-16 w-auto object-contain mix-blend-screen"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
