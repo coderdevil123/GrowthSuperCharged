@@ -21,12 +21,12 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1B1B1B] via-[#2A2A2A] to-[#1B1B1B]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A]">
         <div className="absolute inset-0 opacity-30">
           {[...Array(50)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-[#FF7A00] rounded-full"
+              className="absolute w-1 h-1 bg-emerald-400 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#FF7A0020_1px,transparent_1px),linear-gradient(to_bottom,#FF7A0020_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-32 text-center">
         <motion.div
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
           transition={{ delay: 0.2 }}
           className="inline-block mb-6"
         >
-          <span className="px-6 py-2 bg-[#FF7A00]/10 border border-[#FF7A00]/20 rounded-full text-sm font-semibold text-[#FF7A00]">
+          <span className="px-6 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-semibold text-emerald-400">
             Own The Edge
           </span>
         </motion.div>
@@ -64,10 +64,10 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-none"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          style={{ fontFamily: "'Merienda', cursive" }}
         >
           <span className="block text-white">Growth</span>
-          <span className="block bg-gradient-to-r from-[#FF7A00] to-[#FFD13F] bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
             SuperCharged
           </span>
         </motion.h1>
@@ -78,8 +78,8 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-4xl text-[#FFD13F] mb-12 font-semibold"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          className="text-2xl md:text-4xl text-emerald-400 mb-12 font-semibold"
+          style={{ fontFamily: "'Merienda', cursive" }}
         >
           {dynamicHeadlines[currentHeadline]}
         </motion.div>
@@ -104,7 +104,7 @@ const HeroSection: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 bg-[#FF7A00] text-white rounded-full text-lg font-semibold hover:bg-[#FF8C1A] transition-all duration-300 shadow-lg shadow-[#FF7A00]/50 group flex items-center gap-2"
+              className="px-10 py-4 bg-emerald-500 text-white rounded-full text-lg font-semibold hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/50 group flex items-center gap-2"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -114,7 +114,7 @@ const HeroSection: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 border-2 border-[#FF7A00]/30 text-white rounded-full text-lg font-semibold hover:border-[#FF7A00] hover:bg-[#FF7A00]/10 transition-all duration-300"
+              className="px-10 py-4 border-2 border-emerald-500/30 text-white rounded-full text-lg font-semibold hover:border-emerald-500 hover:bg-emerald-500/10 transition-all duration-300"
             >
               Our Services
             </motion.button>

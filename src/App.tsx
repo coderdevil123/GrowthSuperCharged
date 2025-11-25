@@ -10,7 +10,7 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#1B1B1B] text-white overflow-x-hidden">
+      <div className="min-h-screen bg-[#0F172A] text-white overflow-x-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />

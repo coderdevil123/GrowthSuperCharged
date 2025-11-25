@@ -29,7 +29,7 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#2A2A2A]">
+    <section className="py-24 px-6 md:px-12 bg-[#1e293b]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,11 +39,11 @@ const ServicesSection: React.FC = () => {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Merienda', cursive" }}
           >
-            What We <span className="text-[#FF7A00]">Do</span>
+            What We <span className="text-emerald-400">Do</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#FF7A00] to-[#FFD13F] mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Growth Supercharged was founded with one mission: to help businesses grow and thrive 
             in an increasingly competitive market.
@@ -60,17 +60,17 @@ const ServicesSection: React.FC = () => {
               transition={{ delay: index * 0.1 }}
             >
               <CardContainer className="inter-var">
-                <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/50">
+                <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50">
                   <CardItem
                     translateZ="50"
-                    className="w-16 h-16 bg-[#FF7A00]/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-[#FF7A00]/20 transition-all duration-300"
+                    className="w-16 h-16 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-emerald-500/20 transition-all duration-300"
                   >
-                    <service.icon className="w-8 h-8 text-[#FF7A00]" />
+                    <service.icon className="w-8 h-8 text-emerald-400" />
                   </CardItem>
 
                   <CardItem
                     translateZ="60"
-                    className="text-2xl font-bold text-white mb-4 group-hover/card:text-[#FF7A00] transition-colors duration-300"
+                    className="text-2xl font-bold text-white mb-4 group-hover/card:text-emerald-400 transition-colors duration-300"
                   >
                     {service.title}
                   </CardItem>
@@ -98,7 +98,7 @@ const ServicesSection: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-[#FF7A00] text-white rounded-full font-semibold hover:bg-[#FF8C1A] transition-all duration-300 shadow-lg shadow-[#FF7A00]/50"
+              className="px-8 py-3 bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/50"
             >
               View All Services
             </motion.button>

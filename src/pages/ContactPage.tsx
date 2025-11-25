@@ -26,7 +26,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1B1B1B] via-[#2A2A2A] to-[#1B1B1B] pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] pt-20">
       <section className="py-24 px-6 md:px-12 relative overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute inset-0">
@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#FF7A00]/20 to-[#FFD13F]/20 rounded-full blur-3xl"
+            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-[#FFD13F]/20 to-[#FF7A00]/20 rounded-full blur-3xl"
+            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -66,7 +66,7 @@ const ContactPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 rounded-full blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"
           />
         </div>
 
@@ -86,14 +86,14 @@ const ContactPage: React.FC = () => {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="text-7xl md:text-9xl font-bold mb-6 text-white relative inline-block"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
               <motion.span
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(255,122,0,0.5)',
-                    '0 0 40px rgba(255,122,0,0.8)',
-                    '0 0 20px rgba(255,122,0,0.5)',
+                    '0 0 20px rgba(16,185,129,0.5)',
+                    '0 0 40px rgba(16,185,129,0.8)',
+                    '0 0 20px rgba(16,185,129,0.5)',
                   ],
                 }}
                 transition={{
@@ -101,7 +101,7 @@ const ContactPage: React.FC = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent"
               >
                 Get in Touch
               </motion.span>
@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF7A00] to-transparent"
+                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
                 style={{ transformOrigin: 'center' }}
               />
             </motion.h1>
@@ -129,9 +129,9 @@ const ContactPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
               className="text-xl font-semibold"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
-              <span className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent text-3xl">
+              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent text-3xl">
                 Connect • Learn • Grow
               </span>
             </motion.p>
@@ -144,8 +144,8 @@ const ContactPage: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/30 transition-all duration-300">
-                <h2 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+                <h2 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: "'Merienda', cursive" }}>
                   Send us a message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -156,7 +156,7 @@ const ContactPage: React.FC = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#FF7A00] transition-colors"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-emerald-500 transition-colors"
                       placeholder="Your name"
                       required
                     />
@@ -218,7 +218,7 @@ const ContactPage: React.FC = () => {
                     type="submit"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full px-8 py-4 bg-[#FF7A00] text-white rounded-lg font-semibold hover:bg-[#FF8C1A] transition-all duration-300 shadow-lg shadow-[#FF7A00]/50 flex items-center justify-center gap-2"
+                    className="w-full px-8 py-4 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/50 flex items-center justify-center gap-2"
                   >
                     Send Message
                     <Send className="w-5 h-5" />
@@ -234,8 +234,8 @@ const ContactPage: React.FC = () => {
               transition={{ delay: 1, duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/30 transition-all duration-300">
-                <h2 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-300">
+                <h2 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: "'Merienda', cursive" }}>
                   Contact Information
                 </h2>
                 
@@ -246,12 +246,12 @@ const ContactPage: React.FC = () => {
                     transition={{ delay: 1.2 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-12 h-12 bg-[#FF7A00]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#FF7A00]" />
+                    <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                      <a href="mailto:hello@growthsupercharged.com" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
+                      <a href="mailto:hello@growthsupercharged.com" className="text-gray-400 hover:text-emerald-400 transition-colors">
                         hello@growthsupercharged.com
                       </a>
                     </div>
@@ -263,12 +263,12 @@ const ContactPage: React.FC = () => {
                     transition={{ delay: 1.3 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-12 h-12 bg-[#FF7A00]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#FF7A00]" />
+                    <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                      <a href="tel:+1234567890" className="text-gray-400 hover:text-[#FF7A00] transition-colors">
+                      <a href="tel:+1234567890" className="text-gray-400 hover:text-emerald-400 transition-colors">
                         +1 (234) 567-890
                       </a>
                     </div>
@@ -280,8 +280,8 @@ const ContactPage: React.FC = () => {
                     transition={{ delay: 1.4 }}
                     className="flex items-start gap-4"
                   >
-                    <div className="w-12 h-12 bg-[#FF7A00]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#FF7A00]" />
+                    <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Location</h3>
@@ -298,9 +298,9 @@ const ContactPage: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.5 }}
-                className="bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 backdrop-blur-sm rounded-2xl p-8 border border-[#FF7A00]/20"
+                className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20"
               >
-                <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: "'Merienda', cursive" }}>
                   Ready to grow?
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -322,7 +322,7 @@ const ContactPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-40 right-20 w-32 h-32 bg-[#FF7A00]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute top-40 right-20 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"
           />
           <motion.div
             animate={{
@@ -335,7 +335,7 @@ const ContactPage: React.FC = () => {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-40 left-20 w-40 h-40 bg-[#FFD13F]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute bottom-40 left-20 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"
           />
         </div>
       </section>

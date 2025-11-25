@@ -28,7 +28,7 @@ const features = [
 
 const WhyChooseSection: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#2A2A2A] to-[#1B1B1B]">
+    <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#1e293b] to-[#0F172A]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,11 +38,11 @@ const WhyChooseSection: React.FC = () => {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Merienda', cursive" }}
           >
-            Why Choose <span className="text-[#FF7A00]">Us</span>
+            Why Choose <span className="text-emerald-400">Us</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#FF7A00] to-[#FFD13F] mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -55,17 +55,17 @@ const WhyChooseSection: React.FC = () => {
               transition={{ delay: index * 0.1 }}
             >
               <CardContainer className="inter-var">
-                <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/50 text-center">
+                <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 text-center">
                   <CardItem
                     translateZ="50"
-                    className="w-16 h-16 bg-[#FF7A00]/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover/card:bg-[#FF7A00]/20 transition-all duration-300"
+                    className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover/card:bg-emerald-500/20 transition-all duration-300"
                   >
-                    <feature.icon className="w-8 h-8 text-[#FF7A00]" />
+                    <feature.icon className="w-8 h-8 text-emerald-400" />
                   </CardItem>
 
                   <CardItem
                     translateZ="60"
-                    className="text-xl font-bold text-white mb-4 group-hover/card:text-[#FF7A00] transition-colors duration-300"
+                    className="text-xl font-bold text-white mb-4 group-hover/card:text-emerald-400 transition-colors duration-300"
                   >
                     {feature.title}
                   </CardItem>

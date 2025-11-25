@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Database, Lightbulb } from 'lucide-react';
-import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
+import { CardContainer, CardBody, CardItem } from '../components/ui/3d-card';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1B1B1B] via-[#2A2A2A] to-[#1B1B1B] pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] pt-20">
       <section className="py-24 px-6 md:px-12 relative overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute inset-0">
@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#FF7A00]/20 to-[#FFD13F]/20 rounded-full blur-3xl"
+            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -80,7 +80,7 @@ const AboutPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-[#FFD13F]/20 to-[#FF7A00]/20 rounded-full blur-3xl"
+            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -92,7 +92,7 @@ const AboutPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 rounded-full blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"
           />
         </div>
 
@@ -112,14 +112,14 @@ const AboutPage: React.FC = () => {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="text-7xl md:text-9xl font-bold mb-6 text-white relative inline-block"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
               <motion.span
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(255,122,0,0.5)',
-                    '0 0 40px rgba(255,122,0,0.8)',
-                    '0 0 20px rgba(255,122,0,0.5)',
+                    '0 0 20px rgba(16,185,129,0.5)',
+                    '0 0 40px rgba(16,185,129,0.8)',
+                    '0 0 20px rgba(16,185,129,0.5)',
                   ],
                 }}
                 transition={{
@@ -127,7 +127,7 @@ const AboutPage: React.FC = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent"
               >
                 About Us
               </motion.span>
@@ -137,7 +137,7 @@ const AboutPage: React.FC = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF7A00] to-transparent"
+                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
                 style={{ transformOrigin: 'center' }}
               />
             </motion.h1>
@@ -157,7 +157,7 @@ const AboutPage: React.FC = () => {
               className="text-2xl text-gray-300 leading-relaxed mb-8 text-center"
             >
               We pride ourselves on being more than consultants - we are your{' '}
-              <span className="text-[#FF7A00] font-semibold italic">growth partners</span>.
+              <span className="text-emerald-400 font-semibold italic">growth partners</span>.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -185,18 +185,18 @@ const AboutPage: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
-              Why We Are <span className="text-[#FF7A00]">Different</span>
+              Why We Are <span className="text-emerald-400">Different</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1 }}
               className="text-3xl font-bold mb-4"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
-              <span className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
                 Deep. Data-Driven. Dynamic.
               </span>
             </motion.p>
@@ -225,17 +225,17 @@ const AboutPage: React.FC = () => {
                 }}
               >
                 <CardContainer className="inter-var">
-                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/50">
+                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50">
                     <CardItem
                       translateZ="50"
-                      className="w-16 h-16 bg-[#FF7A00]/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-[#FF7A00]/20 transition-all duration-300"
+                      className="w-16 h-16 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-emerald-500/20 transition-all duration-300"
                     >
-                      <principle.icon className="w-8 h-8 text-[#FF7A00]" />
+                      <principle.icon className="w-8 h-8 text-emerald-400" />
                     </CardItem>
 
                     <CardItem
                       translateZ="60"
-                      className="text-2xl font-bold text-white mb-6 group-hover/card:text-[#FF7A00] transition-colors duration-300"
+                      className="text-2xl font-bold text-white mb-6 group-hover/card:text-emerald-400 transition-colors duration-300"
                     >
                       {principle.title}
                     </CardItem>
@@ -243,7 +243,7 @@ const AboutPage: React.FC = () => {
                     <CardItem translateZ="40" as="ul" className="space-y-4">
                       {principle.points.map((point, idx) => (
                         <li key={idx} className="text-gray-400 leading-relaxed text-sm flex items-start gap-2">
-                          <span className="text-[#FF7A00] mt-1">•</span>
+                          <span className="text-emerald-400 mt-1">•</span>
                           <span>{point}</span>
                         </li>
                       ))}
@@ -261,7 +261,7 @@ const AboutPage: React.FC = () => {
             transition={{ delay: 1.5 }}
             className="mt-20"
           >
-            <div className="bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 backdrop-blur-xl rounded-3xl p-12 border border-[#FF7A00]/20">
+            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl rounded-3xl p-12 border border-emerald-500/20">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   { value: '500+', label: 'Projects Completed' },
@@ -285,8 +285,8 @@ const AboutPage: React.FC = () => {
                         ease: "easeInOut",
                         delay: index * 0.2,
                       }}
-                      className="text-5xl md:text-6xl font-bold text-[#FF7A00] mb-2"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
+                      className="text-5xl md:text-6xl font-bold text-emerald-400 mb-2"
+                      style={{ fontFamily: "'Merienda', cursive" }}
                     >
                       {stat.value}
                     </motion.div>
@@ -308,7 +308,7 @@ const AboutPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-40 right-20 w-32 h-32 bg-[#FF7A00]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute top-40 right-20 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"
           />
           <motion.div
             animate={{
@@ -321,7 +321,7 @@ const AboutPage: React.FC = () => {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-40 left-20 w-40 h-40 bg-[#FFD13F]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute bottom-40 left-20 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"
           />
         </div>
       </section>

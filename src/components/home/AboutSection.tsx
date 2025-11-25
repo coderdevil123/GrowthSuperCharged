@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#1B1B1B] to-[#2A2A2A]">
+    <section className="py-24 px-6 md:px-12 bg-gradient-to-b from-[#0F172A] to-[#1e293b]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -14,11 +14,11 @@ const AboutSection: React.FC = () => {
         >
           <h2
             className="text-5xl md:text-6xl font-bold mb-6 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Merienda', cursive" }}
           >
-            About <span className="text-[#FF7A00]">Us</span>
+            About <span className="text-emerald-400">Us</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#FF7A00] to-[#FFD13F] mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto mb-8"></div>
         </motion.div>
 
         <motion.div
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
           className="max-w-4xl mx-auto text-center"
         >
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
-            At Growth Supercharged, we believe in more than just growth. We believe in <span className="text-[#FF7A00] font-semibold">transformation</span>.
+            At Growth Supercharged, we believe in more than just growth. We believe in <span className="text-emerald-400 font-semibold">transformation</span>.
           </p>
           <p className="text-lg text-gray-400 leading-relaxed mb-8">
             Whether scaling up or aiming to reach the next level, our team partners with you to create 

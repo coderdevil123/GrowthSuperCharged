@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Mail, Award, Briefcase, GraduationCap } from 'lucide-react';
-import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
+import { CardContainer, CardBody, CardItem } from '../components/ui/3d-card';
 import Footer from '../components/Footer';
 
 const team = [
@@ -78,12 +78,48 @@ const getInitialPosition = (direction: string) => {
 
 const TeamPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#1B1B1B] pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] pt-20">
       <section className="py-24 px-6 md:px-12 relative overflow-hidden">
-        {/* Animated Background */}
+        {/* Animated Background Blobs */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,122,0,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,209,63,0.1),transparent_50%)]" />
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 90, 0],
+              x: [0, 100, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{
+              scale: [1, 1.3, 1],
+              rotate: [0, -90, 0],
+              x: [0, -100, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{
+              scale: [1, 1.15, 1],
+              y: [0, 50, 0],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"
+          />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -102,14 +138,14 @@ const TeamPage: React.FC = () => {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="text-7xl md:text-9xl font-bold mb-6 text-white relative inline-block"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
               <motion.span
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(255,122,0,0.5)',
-                    '0 0 40px rgba(255,122,0,0.8)',
-                    '0 0 20px rgba(255,122,0,0.5)',
+                    '0 0 20px rgba(16,185,129,0.5)',
+                    '0 0 40px rgba(16,185,129,0.8)',
+                    '0 0 20px rgba(16,185,129,0.5)',
                   ],
                 }}
                 transition={{
@@ -117,7 +153,7 @@ const TeamPage: React.FC = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent"
               >
                 Our Dream Team
               </motion.span>
@@ -127,7 +163,7 @@ const TeamPage: React.FC = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF7A00] to-transparent"
+                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
                 style={{ transformOrigin: 'center' }}
               />
             </motion.h1>
@@ -157,14 +193,14 @@ const TeamPage: React.FC = () => {
                 }}
               >
                 <CardContainer className="inter-var">
-                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-full rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/50 overflow-hidden">
+                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-full rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 overflow-hidden">
                     {/* Gradient Background on Hover */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${member.color} opacity-0 group-hover/card:opacity-5 transition-opacity duration-500`} />
 
                     {/* Profile Image Placeholder */}
                     <CardItem translateZ="60" className="relative mb-6">
                       <div className={`w-32 h-32 mx-auto rounded-full bg-gradient-to-br ${member.color} p-1 group-hover/card:scale-110 transition-transform duration-500`}>
-                        <div className="w-full h-full rounded-full bg-[#1B1B1B] flex items-center justify-center">
+                        <div className="w-full h-full rounded-full bg-[#0F172A] flex items-center justify-center">
                           <div className={`w-28 h-28 rounded-full bg-gradient-to-br ${member.color} opacity-20 flex items-center justify-center`}>
                             <Briefcase className="w-12 h-12 text-white" />
                           </div>
@@ -189,7 +225,7 @@ const TeamPage: React.FC = () => {
                     >
                       <h3 
                         className="text-2xl font-bold text-white group-hover/card:text-emerald-400 transition-colors duration-300"
-                        style={{ fontFamily: "'Playfair Display', serif" }}
+                        style={{ fontFamily: "'Merienda', cursive" }}
                       >
                         {member.name}
                       </h3>
@@ -227,7 +263,7 @@ const TeamPage: React.FC = () => {
                           initial={{ opacity: 0, scale: 0 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 1.6 + idx * 0.1 }}
-                          className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400 hover:text-[#FF7A00] hover:border-[#FF7A00]/50 transition-all duration-300"
+                          className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400 hover:text-emerald-400 hover:border-emerald-500/50 transition-all duration-300"
                         >
                           {achievement}
                         </motion.span>
@@ -258,10 +294,10 @@ const TeamPage: React.FC = () => {
                           href={social.href}
                           whileHover={{ scale: 1.2, rotate: 5 }}
                           whileTap={{ scale: 0.9 }}
-                          className="w-10 h-10 bg-white/5 hover:bg-[#FF7A00]/20 border border-white/10 hover:border-[#FF7A00]/50 rounded-full flex items-center justify-center transition-all duration-300 group/social"
+                          className="w-10 h-10 bg-white/5 hover:bg-emerald-500/20 border border-white/10 hover:border-emerald-500/50 rounded-full flex items-center justify-center transition-all duration-300 group/social"
                           aria-label={social.label}
                         >
-                          <social.icon className="w-4 h-4 text-gray-400 group-hover/social:text-[#FF7A00] transition-colors" />
+                          <social.icon className="w-4 h-4 text-gray-400 group-hover/social:text-emerald-400 transition-colors" />
                         </motion.a>
                       ))}
                     </CardItem>
@@ -283,12 +319,12 @@ const TeamPage: React.FC = () => {
             transition={{ delay: 1.8 }}
             className="mt-20 text-center"
           >
-            <div className="bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 backdrop-blur-xl rounded-3xl p-12 border border-[#FF7A00]/20">
+            <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-xl rounded-3xl p-12 border border-emerald-500/20">
               <h2 
                 className="text-4xl md:text-5xl font-bold text-white mb-6"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'Merienda', cursive" }}
               >
-                Want to <span className="text-[#FF7A00]">Join Us?</span>
+                Want to <span className="text-emerald-400">Join Us?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 We're always looking for talented individuals who are passionate about growth and innovation.
@@ -296,7 +332,7 @@ const TeamPage: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-10 py-4 bg-[#FF7A00] text-white rounded-full text-lg font-semibold hover:bg-[#FF8C1A] transition-all duration-300 shadow-lg shadow-[#FF7A00]/50"
+                className="px-10 py-4 bg-emerald-500 text-white rounded-full text-lg font-semibold hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/50"
               >
                 View Open Positions
               </motion.button>

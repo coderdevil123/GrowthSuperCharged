@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, Target, Zap, Share2, Users, Database, BarChart3, Package, Building, Palette } from 'lucide-react';
-import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
+import { CardContainer, CardBody, CardItem } from '../components/ui/3d-card';
 import Footer from '../components/Footer';
 
 const services = [
@@ -84,7 +84,7 @@ const getInitialPosition = (direction: string) => {
 
 const ServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1B1B1B] via-[#2A2A2A] to-[#1B1B1B] pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] pt-20">
       <section className="py-24 px-6 md:px-12 relative overflow-hidden">
         {/* Animated Background Blobs */}
         <div className="absolute inset-0">
@@ -99,7 +99,7 @@ const ServicesPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#FF7A00]/20 to-[#FFD13F]/20 rounded-full blur-3xl"
+            className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -112,7 +112,7 @@ const ServicesPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-[#FFD13F]/20 to-[#FF7A00]/20 rounded-full blur-3xl"
+            className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-full blur-3xl"
           />
           <motion.div
             animate={{
@@ -124,7 +124,7 @@ const ServicesPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#FF7A00]/10 to-[#FFD13F]/10 rounded-full blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-full blur-3xl"
           />
         </div>
 
@@ -144,14 +144,14 @@ const ServicesPage: React.FC = () => {
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
               className="text-7xl md:text-9xl font-bold mb-6 text-white relative inline-block"
-              style={{ fontFamily: "'Great Vibes', cursive" }}
+              style={{ fontFamily: "'Merienda', cursive" }}
             >
               <motion.span
                 animate={{
                   textShadow: [
-                    '0 0 20px rgba(255,122,0,0.5)',
-                    '0 0 40px rgba(255,122,0,0.8)',
-                    '0 0 20px rgba(255,122,0,0.5)',
+                    '0 0 20px rgba(16,185,129,0.5)',
+                    '0 0 40px rgba(16,185,129,0.8)',
+                    '0 0 20px rgba(16,185,129,0.5)',
                   ],
                 }}
                 transition={{
@@ -159,7 +159,7 @@ const ServicesPage: React.FC = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-r from-[#FF7A00] via-[#FFD13F] to-[#FF7A00] bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent"
               >
                 Our Services
               </motion.span>
@@ -169,7 +169,7 @@ const ServicesPage: React.FC = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
-                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF7A00] to-transparent"
+                className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent"
                 style={{ transformOrigin: 'center' }}
               />
             </motion.h1>
@@ -200,17 +200,17 @@ const ServicesPage: React.FC = () => {
                 }}
               >
                 <CardContainer className="inter-var">
-                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-[#FF7A00]/50">
+                  <CardBody className="bg-gradient-to-br from-white/5 to-white/[0.02] relative group/card backdrop-blur-sm w-full h-auto rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50">
                     <CardItem
                       translateZ="50"
-                      className="w-16 h-16 bg-[#FF7A00]/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-[#FF7A00]/20 transition-all duration-300"
+                      className="w-16 h-16 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6 group-hover/card:bg-emerald-500/20 transition-all duration-300"
                     >
-                      <service.icon className="w-8 h-8 text-[#FF7A00]" />
+                      <service.icon className="w-8 h-8 text-emerald-400" />
                     </CardItem>
 
                     <CardItem
                       translateZ="60"
-                      className="text-2xl font-bold text-white mb-4 group-hover/card:text-[#FF7A00] transition-colors duration-300"
+                      className="text-2xl font-bold text-white mb-4 group-hover/card:text-emerald-400 transition-colors duration-300"
                     >
                       {service.title}
                     </CardItem>
@@ -239,7 +239,7 @@ const ServicesPage: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-40 right-20 w-32 h-32 bg-[#FF7A00]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute top-40 right-20 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"
           />
           <motion.div
             animate={{
@@ -252,7 +252,7 @@ const ServicesPage: React.FC = () => {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-40 left-20 w-40 h-40 bg-[#FFD13F]/10 rounded-full blur-3xl pointer-events-none"
+            className="absolute bottom-40 left-20 w-40 h-40 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"
           />
         </div>
       </section>

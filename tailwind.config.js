@@ -11,16 +11,16 @@ module.exports = {
         background: "hsl(0, 0%, 100%)",
         foreground: "hsl(0, 0%, 0%)",
         primary: {
-          DEFAULT: "#FF7A00",
+          DEFAULT: "#10B981",
           foreground: "hsl(0, 0%, 100%)",
         },
         secondary: {
-          DEFAULT: "#1B1B1B",
+          DEFAULT: "#0F172A",
           foreground: "hsl(0, 0%, 100%)",
         },
         accent: {
-          DEFAULT: "#FFD13F",
-          foreground: "#1B1B1B",
+          DEFAULT: "#34D399",
+          foreground: "#0F172A",
         },
         emerald: {
           dark: "hsl(160, 80%, 20%)",
