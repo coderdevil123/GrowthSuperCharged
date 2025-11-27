@@ -232,86 +232,146 @@ const AnimatedContactButton: React.FC = () => {
       className="relative overflow-hidden rounded-full bg-emerald-500 px-8 py-2.5 text-base font-medium text-white shadow-lg shadow-emerald-500/50 transition-all duration-300 hover:bg-emerald-600 min-w-[160px]"
       whileTap={{ scale: 0.95 }}
     >
-      {/* Supercharged electric pattern on hover - BOLD BLACK - EVEN SLOWER */}
+      {/* ULTRA SHINY light pattern - SLOWER */}
       <AnimatePresence>
         {isHovered && !isClicked && (
           <>
-            {/* Lightning bolt pattern overlay */}
+            {/* Main brilliant light sweep - SLOWER */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-black to-transparent opacity-70"
-              initial={{ x: '-100%', skewX: -20 }}
-              animate={{ x: '200%', skewX: -20 }}
-              exit={{ x: '200%' }}
-              transition={{ duration: 1.0, ease: 'easeInOut' }}
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-70"
+              initial={{ x: '-150%', skewX: -25 }}
+              animate={{ x: '250%', skewX: -25 }}
+              exit={{ x: '250%' }}
+              transition={{ duration: 1.2, ease: 'easeInOut' }}
               style={{ 
-                zIndex: 1,
-                backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 8px, rgba(0, 0, 0, 0.8) 8px, rgba(0, 0, 0, 0.8) 16px)',
+                zIndex: 3,
+                filter: 'blur(10px)',
+                boxShadow: '0 0 20px rgba(255, 255, 255, 0.8)',
               }}
             />
-            {/* Electric streak 1 */}
+            
+            {/* Intense center beam - SLOWER */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-black to-transparent opacity-90"
-              initial={{ x: '-100%', skewX: -15 }}
-              animate={{ x: '200%', skewX: -15 }}
-              transition={{ duration: 0.9, ease: 'easeInOut', delay: 0.1 }}
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-90"
+              initial={{ x: '-120%', skewX: -20 }}
+              animate={{ x: '220%', skewX: -20 }}
+              transition={{ duration: 1.15, ease: 'easeInOut', delay: 0.05 }}
               style={{ 
-                zIndex: 2,
-                height: '4px',
-                top: '25%',
+                zIndex: 4,
+                height: '100%',
+                width: '60%',
+                filter: 'blur(5px)',
+                boxShadow: '0 0 30px rgba(255, 255, 255, 0.9)',
               }}
             />
-            {/* Electric streak 2 */}
+            
+            {/* Sharp light streaks - SLOWER */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-900 to-transparent opacity-95"
-              initial={{ x: '-100%', skewX: -10 }}
-              animate={{ x: '200%', skewX: -10 }}
-              transition={{ duration: 0.95, ease: 'easeInOut', delay: 0.05 }}
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-100 to-transparent opacity-95"
+              initial={{ x: '-100%', skewX: -18 }}
+              animate={{ x: '200%', skewX: -18 }}
+              transition={{ duration: 1.1, ease: 'easeInOut', delay: 0.03 }}
               style={{ 
-                zIndex: 2,
+                zIndex: 5,
                 height: '5px',
-                top: '50%',
+                top: '20%',
+                boxShadow: '0 0 10px rgba(255, 255, 200, 0.8)',
               }}
             />
-            {/* Electric streak 3 */}
+            
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-black to-transparent opacity-85"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-100"
               initial={{ x: '-100%', skewX: -12 }}
               animate={{ x: '200%', skewX: -12 }}
-              transition={{ duration: 1.0, ease: 'easeInOut' }}
+              transition={{ duration: 1.15, ease: 'easeInOut', delay: 0.02 }}
               style={{ 
-                zIndex: 2,
-                height: '4px',
-                top: '75%',
+                zIndex: 5,
+                height: '6px',
+                top: '50%',
+                boxShadow: '0 0 15px rgba(255, 255, 255, 1)',
               }}
             />
-            {/* Particle burst effect */}
+            
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-50 to-transparent opacity-95"
+              initial={{ x: '-100%', skewX: -15 }}
+              animate={{ x: '200%', skewX: -15 }}
+              transition={{ duration: 1.2, ease: 'easeInOut' }}
+              style={{ 
+                zIndex: 5,
+                height: '5px',
+                top: '80%',
+                boxShadow: '0 0 10px rgba(200, 255, 200, 0.8)',
+              }}
+            />
+            
+            {/* Sparkle particles - SLOWER */}
             <motion.div
               className="absolute inset-0"
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.7, 0] }}
-              transition={{ duration: 1.0, ease: 'easeInOut' }}
+              animate={{ opacity: [0, 0.8, 0] }}
+              transition={{ duration: 1.2, ease: 'easeInOut' }}
               style={{ 
-                zIndex: 1,
-                background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.5) 0%, transparent 70%)',
+                zIndex: 2,
+                background: 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7) 0%, transparent 60%)',
+                filter: 'blur(6px)',
               }}
             />
-            {/* Additional intense flash */}
+            
+            {/* Diamond glint effect - SLOWER */}
             <motion.div
-              className="absolute inset-0 bg-black opacity-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.3, 0] }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-              style={{ zIndex: 3 }}
+              className="absolute inset-0"
+              initial={{ opacity: 0, x: '-120%' }}
+              animate={{ opacity: [0, 1, 0], x: '120%', scale: [0.8, 1.2, 0.8] }}
+              transition={{ duration: 1.15, ease: 'easeInOut' }}
+              style={{ 
+                zIndex: 6,
+                background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent)',
+                width: '30%',
+                filter: 'blur(1px)',
+                boxShadow: '0 0 25px rgba(255, 255, 255, 1)',
+              }}
+            />
+            
+            {/* Rainbow shimmer - SLOWER */}
+            <motion.div
+              className="absolute inset-0"
+              initial={{ opacity: 0, x: '-100%' }}
+              animate={{ opacity: [0, 0.6, 0], x: '100%' }}
+              transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.1 }}
+              style={{ 
+                zIndex: 4,
+                background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 20%, rgba(200, 255, 200, 0.6) 50%, rgba(255, 255, 255, 0.8) 80%, transparent)',
+                width: '50%',
+                filter: 'blur(3px)',
+              }}
             />
           </>
         )}
       </AnimatePresence>
 
-      {/* Text that slides out on click */}
+      {/* Text with shine animation */}
       <motion.span
         className="relative z-10 block"
-        animate={isClicked ? { x: 200, opacity: 0 } : { x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        animate={
+          isClicked 
+            ? { x: 200, opacity: 0 } 
+            : isHovered 
+            ? { 
+                textShadow: [
+                  '0 0 0px rgba(255, 255, 255, 0)',
+                  '0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6)',
+                  '0 0 0px rgba(255, 255, 255, 0)'
+                ],
+                scale: [1, 1.05, 1]
+              }
+            : { x: 0, opacity: 1 }
+        }
+        transition={
+          isClicked 
+            ? { duration: 0.5, ease: 'easeOut' }
+            : { duration: 1.2, ease: 'easeInOut' }
+        }
       >
         Get In Touch
       </motion.span>
